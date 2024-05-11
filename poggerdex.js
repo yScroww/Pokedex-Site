@@ -27,7 +27,7 @@ const displayPokemon = (pokemon) => {
 };
 
 const fetchAndDisplayPokemons = async () => {
-  const limit = 10; // Number of Pokémon to fetch (adjust as needed)
+  const limit = 151; 
   const url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}`;
 
   try {
