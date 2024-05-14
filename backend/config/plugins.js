@@ -1,1 +1,9 @@
-module.exports = () => ({});
+module.exports = () => ({
+
+    "users-permissions": {
+        config: {
+          register: {
+          },
+        },
+      }
+});

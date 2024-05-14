@@ -1,16 +1,17 @@
 <html lang="pt-br">
-    <link rel="stylesheet" href="./style/login.css">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/login.css">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <div class="login-box">
             <h2>Login</h2>
-            <form action="#">
+            <form method="post" action="#">
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email" required>
 
@@ -26,15 +27,13 @@
                     <a href="#" class="forgot-password">Esqueceu a senha?</a>
                 </div>
 
-                <button type="submit" id="submit">Entrar</button>
+                <button type="submit" id="login">Entrar</button>
             </form>
 
-            <div class="login-admin">
-                <a href="#" class="admin-link">Entrar como administrador</a>
-            </div>
         </div>
     </div>
 
     <script src="./js/login.js"></script>
 </body>
+
 </html>

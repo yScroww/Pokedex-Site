@@ -50,4 +50,4 @@ async function logar(e) {
 
 
 }
-document.getElementById("submit").addEventListener("click", logar)
+document.getElementById("login").addEventListener("click", logar)
