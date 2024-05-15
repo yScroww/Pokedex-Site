@@ -13,10 +13,10 @@ const fetchPokemon = async (url) => {
 const displayPokemon = (pokemon) => {
     console.log(pokemon)
     if (pokemon.sprites.front_default != null) {
-        const pokemonCard = document.createElement('div');
+        const pokemonCard = document.createElement('fieldset');
         pokemonCard.classList.add('pokemon-card');
 
-        const pokemonName = document.createElement('h2');
+        const pokemonName = document.createElement('legend');
         pokemonName.innerText = pokemon.name;
 
         const pokemonImage = document.createElement('img');
