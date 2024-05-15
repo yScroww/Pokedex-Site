@@ -10,12 +10,22 @@
 </head>
 
 <body>
-  <div class="red-bar">
+  <header>
+    <h1>Pokédex</h1>
+
+  </header>
+  <div class="teste">
     <nav class="menu-lateral">
       <div class="btn-expandir">
         <i class="bi bi-list"></i>
       </div>
       <ul>
+        <li>
+          <section class="search-bar">
+            <input type="text" placeholder="Search for Pokémon">
+            <button>Search</button>
+          </section>
+        </li>
         <li class="item-menu">
           <a href="#">
             <span class="icon"><i class="bi bi-brightness-high"></i></span>
@@ -30,19 +40,12 @@
         </li>
       </ul>
     </nav>
-  </div>
-  <header>
-    <h1>Pokédex</h1>
 
-  </header>
   <main>
-    <section class="search-bar">
-      <input type="text" placeholder="Search for Pokémon">
-      <button>Search</button>
-    </section>
     <section class="pokemon-list">
     </section>
   </main>
+</div>
   <script src="./js/Pokedex.js"></script>
 </body>
 
