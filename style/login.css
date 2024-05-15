@@ -1,13 +1,12 @@
 body {
     font-family: sans-serif;
-    background-image:url(background.jpeg);
-    background-size: cover;
+    background-image:url(https://cdn.discordapp.com/attachments/1240086657802436628/1240096646419845180/background.jpg?ex=66455180&is=66440000&hm=40895cdd1fb14ee1d3f5702e9085c21e19d86f2eedfe444b4ea38d180e5cc1d0&);
+    background-color: 100%;
 }
 
 .container {
     width: 400px;
     margin: 0 auto;
-    padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -16,7 +15,7 @@ body {
 
 .login-box {
     background-color: #ffffffe3;
-    padding: 20px;
+    padding: 20;
     border-radius: 1px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }

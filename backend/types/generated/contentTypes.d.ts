@@ -362,6 +362,92 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiPokemonPokemon extends Schema.CollectionType {
+  collectionName: 'pokemons';
+  info: {
+    singularName: 'pokemon';
+    pluralName: 'pokemons';
+    displayName: 'Pokemon';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Nome: Attribute.String & Attribute.Required;
+    nID: Attribute.Integer & Attribute.Required;
+    Tipo1: Attribute.String & Attribute.Required;
+    Img: Attribute.Media & Attribute.Required;
+    Tipo2: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::pokemon.pokemon',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::pokemon.pokemon',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTeamTeam extends Schema.CollectionType {
+  collectionName: 'teams';
+  info: {
+    singularName: 'team';
+    pluralName: 'teams';
+    displayName: 'Team';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    pokemon_2: Attribute.Relation<
+      'api::team.team',
+      'oneToOne',
+      'api::pokemon.pokemon'
+    >;
+    pokemon_1: Attribute.Relation<
+      'api::team.team',
+      'oneToOne',
+      'api::pokemon.pokemon'
+    >;
+    pokemon_4: Attribute.Relation<
+      'api::team.team',
+      'oneToOne',
+      'api::pokemon.pokemon'
+    >;
+    pokemon_5: Attribute.Relation<
+      'api::team.team',
+      'oneToOne',
+      'api::pokemon.pokemon'
+    >;
+    pokemon_6: Attribute.Relation<
+      'api::team.team',
+      'oneToOne',
+      'api::pokemon.pokemon'
+    >;
+    pokemon_3: Attribute.Relation<
+      'api::team.team',
+      'oneToOne',
+      'api::pokemon.pokemon'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::team.team', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::team.team', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -798,6 +884,8 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::pokemon.pokemon': ApiPokemonPokemon;
+      'api::team.team': ApiTeamTeam;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
