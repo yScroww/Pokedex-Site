@@ -2,7 +2,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 header {
     border-bottom: 5px solid black;
     z-index: 1001;
@@ -13,43 +15,49 @@ header {
     position: fixed;
     top: 0px;
     width: 100%;
+    height: ;
 
 }
+
 body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgb(253, 253, 253);
+    background: url("https://github.com/yScroww/Pokedex-Site/blob/main/bg/bg%20(1).gif?raw=true") no-repeat bottom center scroll;
+    background-attachment: fixed;
     color: #333;
-}
-
-nav.menu-lateral a {
-    color: #fff;
-    text-decoration: none;
-
+    
 }
 
 nav.menu-lateral {
-    width: 300px;
+    width: 65px;
     height: 100vh;
     position: sticky;
-    top: 82px;
-    border-right: 5px solid black;
+    top: 95px;
     background-color: #ff0000;
+    padding: 40px 0 40px;
+    box-shadow: 5px 0 0 black;
+    transition: .5s;
+    overflow: hidden;
+    display: inline;
 
+}
+
+nav.aberto {
+    width: 300px;
 }
 
 .search-bar {
-    background-color: blue;
-    z-index: 100;
+    display: none;
+    width: 100%;
 }
 
 .search-bar input {
-    display: block;
-    margin: auto;
-    width: 80%;
     padding: 10px;
-    border: 1px solid #ccc;
+    padding-right: 45px;
+    border: 1px solid #333;
+    width: 100%;
+    margin-left: 10%;
 }
 
 .search-bar button {
@@ -58,15 +66,18 @@ nav.menu-lateral {
     color: #fff;
     border: none;
     cursor: pointer;
+    width: 35%;
 }
 
 .pokemon-list {
+    margin-top: 138px;
+    opacity: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
-    margin-left: 45px;
-    width: 850px;
+    width: 1000px;
+    transition: .5s;
 }
 
 .pokemon-card img {
@@ -76,17 +87,26 @@ nav.menu-lateral {
 }
 
 .pokemon-card {
-    padding: 20px;
-    text-align: center;
     cursor: pointer;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
     border: 6px solid #73d8e69d;
     margin-bottom: 2px;
     background-color: #ffffff3a;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: .3s;
+    color: #000000;
+    background-color:white;
+
+}
+.pokemon-card legend{
+    font-size: 25px;
+    text-transform: capitalize;
+    text-align: left;
+    font-weight: bold;
 }
 
 .pokemon-card:hover {
@@ -102,4 +122,67 @@ nav.menu-lateral {
 
 .teste {
     display: flex;
+}
+
+.btn-expandir {
+    width: 300px;
+    padding: 10px 15px;
+    transition: .5s;
+}
+.btn-expandir.escala-invertida {
+    transform: scale(-1);
+}
+
+.btn-expandir>i {
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+ul {
+    height: 80vh;
+    list-style-type: none;
+    width: 300px;
+}
+
+ul li.item-menu {
+    transition: .5s;
+}
+ul li.item-menu button.ativo{
+    background-color: #e40b0b;
+}
+
+ul li.item-menu button:hover {
+    background-color: #e40b0b;
+}
+
+ul li.item-menu button {
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    padding: 10px 3%;
+    display: flex;
+    background-color: #ff0000;
+    text-align: center;
+    transition: .5s;
+    cursor: pointer;
+}
+
+ul li.item-menu button .txt-link {
+    transition: .5s;
+    opacity: 0;
+    line-height: 45px;
+    text-align: center;
+
+}
+nav.menu-lateral.aberto .txt-link{
+    opacity: 1;
+    line-height: 45px;
+    text-align: center;
+    width: 250px;
+}
+
+ul li.item-menu img {
+    width: 50px;
+    height: 50px;
 }
