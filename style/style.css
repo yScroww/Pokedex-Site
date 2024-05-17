@@ -1,3 +1,39 @@
+<<<<<<< Updated upstream
+=======
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    border-bottom: 5px solid black;
+    z-index: 1001;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    max-height: 100px;
+    z-index: 1;
+}
+
+body::-webkit-scrollbar {
+    background: red;
+    width: 20px;
+    border-left: 5px solid black;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 12px;
+    z-index: 15;
+}
+
+>>>>>>> Stashed changes
 body {
     font-family: sans-serif;
     margin: 0;
@@ -13,8 +49,29 @@ header {
   
 }
 
+<<<<<<< Updated upstream
 header h1 {
     margin: 0;
+=======
+main {
+    display: flex;
+    gap: 4vw;
+}
+
+nav.menu-lateral {
+    width: 10vw;
+    max-width: 65px;
+    height: 100vh;
+    position: sticky;
+    margin-top: -100px;
+    top: 0;
+    background-color: #ff0000;
+    box-shadow: 5px 0 0 black;
+    transition: .5s;
+    overflow: hidden;
+    display: inline;
+    z-index: 2;
+>>>>>>> Stashed changes
 }
 
 nav ul {
@@ -83,9 +140,14 @@ nav a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: .3s;
     color: #000000;
+<<<<<<< Updated upstream
   }
 .pokemon-card:hover{
     transform: scale(1.1);
+=======
+    background-color: white;
+    max-height: 255px;
+>>>>>>> Stashed changes
 }
 .pokemon-card legend{
     font-size: 25px;
@@ -93,7 +155,240 @@ nav a {
     text-align: left;
     font-weight: bold;
 }
+<<<<<<< Updated upstream
   .pokemon-card img {
     width: 150px; 
     height: auto;
   }
+=======
+
+.pokemon-card:hover {
+    transform: scale(1.1);
+}
+
+
+.pokemon-card h2 {
+    margin-bottom: 1px;
+    text-transform: capitalize;
+}
+
+
+.teste {
+    display: flex;
+    padding-top: 100px;
+
+}
+
+.container {
+    height: 880px;
+}
+
+.lista {
+    max-height: 100%;
+}
+
+.btn-expandir {
+    margin-top: 40px;
+    width: 100%;
+    padding: 10px 15px;
+    transition: .5s;
+}
+
+.btn-expandir.escala-invertida {
+    transform: scale(-1);
+}
+
+.btn-expandir i {
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+ul li.item-menu {
+    transition: .5s;
+}
+
+ul li.item-menu button.ativo,
+ul li.item-menu button:hover {
+    background-color: #e40b0b;
+}
+
+ul li.item-menu button {
+    color: #fff;
+    border: none;
+    font-size: clamp(1px, 1vw, 22px);
+    padding: 3.5px 15px;
+    display: flex;
+    background-color: #ff0000;
+    text-align: center;
+    transition: .5s;
+    cursor: pointer;
+    min-width: 100%;
+    justify-content: left;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+ul li.item-menu button .txt-link {
+    transition: 0s;
+    opacity: 0;
+    line-height: 30px;
+    text-align: center;
+
+}
+
+nav.menu-lateral.aberto .txt-link {
+    opacity: 1;
+    text-align: center;
+    max-width: 80%;
+    transition: 0s;
+}
+
+ul li.item-menu img {
+    width: 40px;
+    height: 40px;
+}
+
+.body-loader {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    position: relative;
+    height: 108px;
+    width: 108px;
+    background: linear-gradient(to bottom, rgb(254, 0, 1) 50%, white 50%);
+    border-radius: 50%;
+    border: 8px solid black;
+    animation: spin 1s linear infinite;
+}
+
+.loader::before {
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 100px;
+    background: black;
+    top: 50px;
+    transform: translatey(-100%);
+}
+
+.loader::after {
+    content: '';
+    position: absolute;
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    background: white;
+    top: 50px;
+    left: 50px;
+    transform: translate(-60%, -60%);
+    box-shadow: inset 0 0 0 8px black, inset 0 0 0 10px white, inset 0 0 0 12px black;
+
+}
+
+.login {
+    display: flex;
+    gap: 10px;
+    padding: 10px 15px;
+}
+
+.btn-login {
+    display: block;
+    width: 40px;
+}
+
+.txt-login {
+    display: none;
+}
+
+.pokeinfo {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border: 6px solid black;
+    transition: .5s;
+    position: sticky;
+    overflow:hidden;
+}
+
+.meialua {
+    width: 50vw;
+    height: 50vw;
+    background-color: rgb(0, 158, 61) ;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-15.8%,-70%);
+}
+.baci{
+    background-color: #333;
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    border-top: 5px solid black;
+}
+.borda-pokeinfo{
+    width: 35vw;
+    height: 70vh;
+    position: sticky;
+    top: 95px;
+    margin-top: -5px;
+}
+.bolaesq{
+    position: absolute;
+    bottom: 0;
+    transform: translate(-35%, 35%);
+    width: 45px;
+}
+.boladir{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(35%, 35%);
+    width: 45px;
+
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+@media (max-width: 1017px) {
+    .pokemon-card {
+        max-width: 100%;
+    }
+
+    .pokemon-list {
+        max-width: 350px;
+    }
+}
+>>>>>>> Stashed changes
