@@ -85,10 +85,20 @@ expandir.addEventListener("click", function () {
     if (document.getElementById("pesquisa").style.display == "flex") {
         document.getElementById("pesquisa").style.display = "none"
         document.querySelector(".pokemon-list").style.opacity = "0"
+        document.querySelector(".pokeinfo").style.border = "5px solid black"
+        document.querySelector(".borda-pokeinfo").style.width = "35vw"
+        document.querySelector(".borda-pokeinfo").style.height = "70vh"
+        document.querySelector(".bolaesq").style.display = "block"
+        document.querySelector(".boladir").style.display = "block"
     }
     else {
         document.getElementById("pesquisa").style.display = "flex"
         document.querySelector(".pokemon-list").style.opacity = "1"
+        document.querySelector(".pokeinfo").style.border = "0"
+        document.querySelector(".borda-pokeinfo").style.width = "0"
+        document.querySelector(".borda-pokeinfo").style.height = "0"
+        document.querySelector(".bolaesq").style.display = "none"
+        document.querySelector(".boladir").style.display = "none"
 
     }
     btnExpandir.classList.toggle("escala-invertida");
