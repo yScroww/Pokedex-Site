@@ -105,14 +105,13 @@ nav.aberto {
 
 .pokemon-card {
     cursor: pointer;
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     border: 6px solid #73d8e69d;
     margin-bottom: 2px;
-    background-color: #ffffff3a;
+    background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: .3s;
     color: #000000;
