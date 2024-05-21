@@ -15,7 +15,7 @@ const fetchPokemon = async (url) => {
     } catch (error) {
         console.error("Error fetching Pokémon data:", error);
     }
-};
+}
 
 const displayPokemon = (pokemon) => {
     console.log(pokemon)
@@ -40,7 +40,6 @@ const displayPokemon = (pokemon) => {
     }
 
 };
-
 
 function showGen(gen) {
     pokemonList.innerHTML = '';
@@ -76,6 +75,7 @@ const fetchAndDisplayPokemons = async () => {
 
 };
 
+
 fetchAndDisplayPokemons();
 var expandir = document.querySelector("#expandir")
 var menu = document.querySelector(".menu-lateral")
@@ -85,17 +85,14 @@ expandir.addEventListener("click", function () {
     if (document.getElementById("pesquisa").style.display == "flex") {
         document.getElementById("pesquisa").style.display = "none"
         document.querySelector(".pokemon-list").style.opacity = "0"
-        document.querySelector(".info").style.display="none"
     }
     else {
-        document.querySelector(".info").style.display="flex"
         document.getElementById("pesquisa").style.display = "flex"
         document.querySelector(".pokemon-list").style.opacity = "1"
 
     }
     btnExpandir.classList.toggle("escala-invertida");
 })
-
 var menuItem = document.querySelectorAll(".item-menu button")
 function selectLink() {
     menuItem.forEach((item) =>
@@ -120,3 +117,4 @@ document.getElementById("lupa").addEventListener("keyup", function (e) {
         displayPokemon(pokemon);
     });
 });
+

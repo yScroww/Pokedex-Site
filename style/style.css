@@ -96,9 +96,9 @@ nav.aberto {
     width: 150px;
     height: auto;
     margin-bottom: 10px;
-}
-
-.pokemon-card {
+  }
+  
+  .pokemon-card {
     cursor: pointer;
     position: relative;
     display: flex;
@@ -111,27 +111,25 @@ nav.aberto {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: .3s;
     color: #000000;
-    background-color: white;
     max-height: 255px;
-
-}
-
-.pokemon-card legend {
+  }
+  
+  .pokemon-card legend {
     font-size: 25px;
     text-transform: capitalize;
     text-align: left;
     font-weight: bold;
-}
-
-.pokemon-card:hover {
+  }
+  
+  .pokemon-card:hover {
     transform: scale(1.1);
-}
-
-
-.pokemon-card h2 {
+  }
+  
+  .pokemon-card h2 {
     margin-bottom: 1px;
     text-transform: capitalize;
-}
+  }
+
 
 
 .teste {
@@ -278,24 +276,17 @@ ul li.item-menu img {
 .txt-login{
     display: none;
 }
-.info{
+.info {
     position: fixed;
     display: none;
     width: 25vw;
-    height: 30vw; 
-    border: 1px solid black; 
+    height: 30vw;
+    border: 1px solid black;
     background-color: #fff;
     margin-top: 30px;
-    
-}
-
-
-
-
-
-
-
-
+    padding: 10px; 
+    z-index: 10; 
+  }
 
 
 @keyframes spin {
