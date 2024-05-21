@@ -82,7 +82,6 @@ nav.aberto {
 }
 
 .pokemon-list {
-    background-color: #fff;
     opacity: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -279,7 +278,16 @@ ul li.item-menu img {
 .txt-login{
     display: none;
 }
-
+.info{
+    position: fixed;
+    display: none;
+    width: 25vw;
+    height: 30vw; 
+    border: 1px solid black; 
+    background-color: #fff;
+    margin-top: 30px;
+    
+}
 
 
 

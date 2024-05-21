@@ -85,8 +85,10 @@ expandir.addEventListener("click", function () {
     if (document.getElementById("pesquisa").style.display == "flex") {
         document.getElementById("pesquisa").style.display = "none"
         document.querySelector(".pokemon-list").style.opacity = "0"
+        document.querySelector(".info").style.display="none"
     }
     else {
+        document.querySelector(".info").style.display="flex"
         document.getElementById("pesquisa").style.display = "flex"
         document.querySelector(".pokemon-list").style.opacity = "1"
 
