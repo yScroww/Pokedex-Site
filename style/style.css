@@ -86,12 +86,11 @@ nav.aberto {
 }
 
 .pokemon-list {
-    background-color: #fff;
     opacity: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 40px;
     width: 55vw;
     min-height: 100%;
     transition: .5s;
@@ -105,19 +104,18 @@ nav.aberto {
 
 .pokemon-card {
     cursor: pointer;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     border: 6px solid #73d8e69d;
     margin-bottom: 2px;
-    background-color: #ffffff;
+    background-color: #ffffff3a;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: .3s;
     color: #000000;
-    background-color: white;
     max-height: 255px;
-
 }
 
 .pokemon-card legend {

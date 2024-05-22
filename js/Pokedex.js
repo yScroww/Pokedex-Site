@@ -84,12 +84,7 @@ expandir.addEventListener("click", function () {
     menu.classList.toggle("aberto")
     if (document.getElementById("pesquisa").style.display == "flex") {
         document.getElementById("pesquisa").style.display = "none"
-        document.querySelector(".pokemon-list").style.opacity = "0"
-        document.querySelector(".pokeinfo").style.border = "5px solid black"
-        document.querySelector(".borda-pokeinfo").style.width = "35vw"
-        document.querySelector(".borda-pokeinfo").style.height = "70vh"
-        document.querySelector(".bolaesq").style.display = "block"
-        document.querySelector(".boladir").style.display = "block"
+
     }
     else {
         document.getElementById("pesquisa").style.display = "flex"
@@ -103,6 +98,7 @@ expandir.addEventListener("click", function () {
     }
     btnExpandir.classList.toggle("escala-invertida");
 })
+document.querySelector
 
 var menuItem = document.querySelectorAll(".item-menu button")
 function selectLink() {
