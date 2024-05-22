@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 * {
     padding: 0;
     margin: 0;
@@ -21,45 +19,30 @@ header {
     z-index: 1;
 }
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar{
     background: red;
-    width: 20px;
     border-left: 5px solid black;
+
 }
 
 body::-webkit-scrollbar-thumb {
     background-color: #fff;
-    border-radius: 12px;
+    border-left: 5px solid black;
+    border-radius: 20px;
     z-index: 15;
-}
+    border-right: 3px solid red;
+  }
 
->>>>>>> Stashed changes
 body {
     font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: whitesmoke;
-    color: #333; 
-}
-header {
-    background-color: #dc0a2d ; 
-    color: #fff; 
-    padding: 20px;
-    text-align: center;
-  
-}
-
-<<<<<<< Updated upstream
-header h1 {
-    margin: 0;
-=======
-main {
-    display: flex;
-    gap: 4vw;
+    background: url("https://github.com/yScroww/Pokedex-Site/blob/main/bg/bg%20(1).gif?raw=true") no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    overflow-y: scroll;
 }
 
 nav.menu-lateral {
-    width: 10vw;
+    width: 65px;
     max-width: 65px;
     height: 100vh;
     position: sticky;
@@ -71,47 +54,22 @@ nav.menu-lateral {
     overflow: hidden;
     display: inline;
     z-index: 2;
->>>>>>> Stashed changes
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+nav.aberto {
+    width: 20%;
+    max-width: 20vw;
 }
 
-nav li {
-    margin-right: 20px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-}
-.red-bar {
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 40px; 
-    height: 100%; 
-  border-right: 5px solid black; 
-    background-color: #dc0a2d; 
-    z-index: 1000; 
-}
 .search-bar {
-  
-  background-color: whitesmoke;
-  z-index: 100;
-  margin-left:40px;
+    display: none;
+    width: 100%;
 }
 
 .search-bar input {
-    width: 500px;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    width: 100%;
 }
 
 .search-bar button {
@@ -120,63 +78,65 @@ nav a {
     color: #fff;
     border: none;
     cursor: pointer;
+    width: 35%;
 }
+
 .pokemon-list {
+    opacity: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
-    margin-left: 45px;
+    width: 55vw;
+    min-height: 100%;
+    transition: .5s;
+    padding:4%;
 }
-.pokemon-card {
+
+.pokemon-card img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .pokemon-card {
     cursor: pointer;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     border: 6px solid #73d8e69d;
     margin-bottom: 2px;
-    background-color: #ffffff;
+    background-color: #ffffff3a;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: .3s;
     color: #000000;
-<<<<<<< Updated upstream
-  }
-.pokemon-card:hover{
-    transform: scale(1.1);
-=======
-    background-color: white;
     max-height: 255px;
->>>>>>> Stashed changes
-}
-.pokemon-card legend{
+  }
+  
+  .pokemon-card legend {
     font-size: 25px;
     text-transform: capitalize;
     text-align: left;
     font-weight: bold;
-}
-<<<<<<< Updated upstream
-  .pokemon-card img {
-    width: 150px; 
-    height: auto;
   }
-=======
-
-.pokemon-card:hover {
+  
+  .pokemon-card:hover {
     transform: scale(1.1);
-}
-
-
-.pokemon-card h2 {
+  }
+  
+  .pokemon-card h2 {
     margin-bottom: 1px;
     text-transform: capitalize;
-}
+  }
+
 
 
 .teste {
     display: flex;
     padding-top: 100px;
-
+    
 }
 
 .container {
@@ -217,6 +177,8 @@ ul li.item-menu button.ativo,
 ul li.item-menu button:hover {
     background-color: #e40b0b;
 }
+
+
 
 ul li.item-menu button {
     color: #fff;
@@ -298,20 +260,31 @@ ul li.item-menu img {
 
 }
 
-.login {
+.login{
     display: flex;
     gap: 10px;
     padding: 10px 15px;
 }
 
-.btn-login {
+.btn-login{
     display: block;
     width: 40px;
 }
 
-.txt-login {
+.txt-login{
     display: none;
 }
+.info {
+    position: fixed;
+    display: none;
+    width: 25vw;
+    height: 30vw;
+    border: 1px solid black;
+    background-color: #fff;
+    margin-top: 30px;
+    padding: 10px; 
+    z-index: 10; 
+  }
 
 .pokeinfo {
     background-color: white;
@@ -331,6 +304,9 @@ ul li.item-menu img {
     position: absolute;
     transform: translate(-15.8%,-70%);
 }
+.chatot{
+    
+}
 .baci{
     background-color: #333;
     width: 100%;
@@ -338,6 +314,9 @@ ul li.item-menu img {
     position: absolute;
     bottom: 0;
     border-top: 5px solid black;
+}
+.altform{
+
 }
 .borda-pokeinfo{
     width: 35vw;
@@ -391,4 +370,3 @@ ul li.item-menu img {
         max-width: 350px;
     }
 }
->>>>>>> Stashed changes
