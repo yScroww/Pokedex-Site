@@ -1,5 +1,124 @@
 const pokemonList = document.querySelector('.pokemon-list');
+async function showinfo(e){
+    let id = e.target.id
+    console.log(id)
+    if(id != null){
+        const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+        const pokemonData = await fetchPokemon(url);
+        console.log(pokemonData)
+        document.querySelector(".pokenome").innerText = pokemonData.name
+        document.querySelector(".pokefoto").src = pokemonData.sprites.other['official-artwork'].front_default
+        showatribbutes(pokemonData)
+        closemenu(pokemonData)  
+        console.log(pokemonData.types.length)
+        document.querySelector(".type1").src = `https://raw.githubusercontent.com/duiker101/pokemon-type-svg-icons/5781623f147f1bf850f426cfe1874ba56a9b75ee/icons/${ pokemonData.types[0].type.name}.svg`
+        let tipo = pokemonData.types[0].type.name
+        if(tipo == "fire"){
+            document.querySelector(".meialua").style.background = "#F08030"
+        }
+        if(tipo == "water"){
+            document.querySelector(".meialua").style.background = "#6890F0"
+        }
+        if(tipo == "grass"){
+            document.querySelector(".meialua").style.background = "#78C850"
+        }
+        if(tipo == "ice"){
+            document.querySelector(".meialua").style.background = "#98D8D8"
+        }
+        if(tipo == "electric"){
+            document.querySelector(".meialua").style.background = "#F8D030"
+        }
+        if(tipo == "fighting"){
+            document.querySelector(".meialua").style.background = "#C03028"
+        }
+        if(tipo == "poison"){
+            document.querySelector(".meialua").style.background = "#A040A0"
+        }
+        if(tipo == "ground"){
+            document.querySelector(".meialua").style.background = "#E0C068"
+        }
+        if(tipo == "flying"){
+            document.querySelector(".meialua").style.background = "#A890F0"
+        }
+        if(tipo == "psychic"){
+            document.querySelector(".meialua").style.background = "#F85888"
+        }
+        if(tipo == "bug"){
+            document.querySelector(".meialua").style.background = "#A8B820"
+        }
+        if(tipo == "rock"){
+            document.querySelector(".meialua").style.background = "#B8A038"
+        }
+        if(tipo == "ghost"){
+            document.querySelector(".meialua").style.background = "#705898"
+        }
+        if(tipo == "dragon"){
+            document.querySelector(".meialua").style.background = "#7038F8"
+        }
+        if(tipo == "dark"){
+            document.querySelector(".meialua").style.background = "#705848"
+        }
+        if(tipo == "steel"){
+            document.querySelector(".meialua").style.background = "#B8B8D0"
+        }
+        if(tipo == "fairy"){
+            document.querySelector(".meialua").style.background = "#EE99AC"
+        }
+        if(tipo == "normal"){
+            document.querySelector(".meialua").style.background = "#A8A878"
+        }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+function showatribbutes(pokemonData){
+    document.querySelector("#hp").value = pokemonData.stats[0].base_stat
+    document.querySelector("#atk").value = pokemonData.stats[1].base_stat
+    document.querySelector("#spa").value = pokemonData.stats[2].base_stat
+    document.querySelector("#spd").value = pokemonData.stats[3].base_stat
+    document.querySelector("#spe").value = pokemonData.stats[4].base_stat
+    document.querySelector("#def").value = pokemonData.stats[5].base_stat
+    document.querySelector("#hp_value").innerText = pokemonData.stats[0].base_stat
+    document.querySelector("#atk_value").innerText = pokemonData.stats[1].base_stat
+    document.querySelector("#spa_value").innerText = pokemonData.stats[2].base_stat
+    document.querySelector("#spd_value").innerText = pokemonData.stats[3].base_stat
+    document.querySelector("#spe_value").innerText = pokemonData.stats[4].base_stat
+    document.querySelector("#def_value").innerText = pokemonData.stats[5].base_stat
+}
+function closemenu(pokemonData){
+    document.querySelector(".pokeinfo").style.border = "5px solid black"
+    document.querySelector(".borda-pokeinfo").style.width = "35vw"
+    document.querySelector(".borda-pokeinfo").style.height = "70vh"
+    document.querySelector(".bolaesq").style.display = "block"
+    document.querySelector(".boladir").style.display = "block"
+    menu.classList.remove("aberto")
+    btnExpandir.classList.remove("escala-invertida");
+}
 
 
 
@@ -18,7 +137,6 @@ const fetchPokemon = async (url) => {
 };
 
 const displayPokemon = (pokemon) => {
-    console.log(pokemon)
     if (pokemon.img != null) {
         const pokemonCard = document.createElement('fieldset');
         pokemonCard.classList.add('pokemon-card');
@@ -36,7 +154,8 @@ const displayPokemon = (pokemon) => {
         pokemonCard.appendChild(pokemonImage);
         pokemonCard.appendChild(pokemonId);
         pokemonList.appendChild(pokemonCard);
-
+        pokemonCard.id = pokemon.id
+        pokemonCard.addEventListener("click", showinfo);
     }
 
 };
@@ -84,11 +203,22 @@ expandir.addEventListener("click", function () {
     menu.classList.toggle("aberto")
     if (document.getElementById("pesquisa").style.display == "flex") {
         document.getElementById("pesquisa").style.display = "none"
-        document.querySelector(".pokemon-list").style.opacity = "0"
+        document.getElementById("pesquisa").style.display = "flex"
+        document.querySelector(".pokemon-list").style.opacity = "1"
+        document.querySelector(".pokeinfo").style.border = "0"
+        document.querySelector(".borda-pokeinfo").style.width = "0"
+        document.querySelector(".borda-pokeinfo").style.height = "0"
+        document.querySelector(".bolaesq").style.display = "none"
+        document.querySelector(".boladir").style.display = "none"
     }
     else {
         document.getElementById("pesquisa").style.display = "flex"
         document.querySelector(".pokemon-list").style.opacity = "1"
+        document.querySelector(".pokeinfo").style.border = "0"
+        document.querySelector(".borda-pokeinfo").style.width = "0"
+        document.querySelector(".borda-pokeinfo").style.height = "0"
+        document.querySelector(".bolaesq").style.display = "none"
+        document.querySelector(".boladir").style.display = "none"
 
     }
     btnExpandir.classList.toggle("escala-invertida");
@@ -118,3 +248,8 @@ document.getElementById("lupa").addEventListener("keyup", function (e) {
         displayPokemon(pokemon);
     });
 });
+
+document.querySelectorAll(".atr_input").forEach(atr => {
+    atr.disabled = true
+});
+
