@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teams",
+  "info": {
+    "singularName": "team",
+    "pluralName": "teams",
+    "displayName": "Team",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pokemon_2": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pokemon.pokemon"
+    },
+    "pokemon_1": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pokemon.pokemon"
+    },
+    "pokemon_4": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pokemon.pokemon"
+    },
+    "pokemon_5": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pokemon.pokemon"
+    },
+    "pokemon_6": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pokemon.pokemon"
+    },
+    "pokemon_3": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::pokemon.pokemon"
+    }
+  }
+}
