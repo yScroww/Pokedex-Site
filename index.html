@@ -11,8 +11,9 @@
 </head>
 
 <body>
+  <audio src="assets/som_fundo_pkd.mp3" id="musga"></audio>
   <header>
-    <img src="https://github.com/yScroww/Pokedex-Site/blob/main/assets/Pok%C3%A9dex_logo.png?raw=true">
+    <img src="assets/Pokédex_logo.png">
 
   </header>
   <div class="teste">
@@ -27,8 +28,9 @@
         </div>
         <ul class="lista">
           <li class="item-menu ativo">
-            <button>
-              <span class="icon"><label for="lupa"><img src="https://github.com/yScroww/Pokedex-Site/blob/main/assets/Dream_Wide_Lens_Sprite.png?raw=true"></label></span>
+            <button >
+              <span class="icon"><label for="lupa"><img
+                    src="assets/Dream_Wide_Lens_Sprite.png"></label></span>
               <section class="search-bar" id="pesquisa">
                 <input id="lupa" type="text" placeholder="Procure um Pokémon">
               </section>
@@ -36,61 +38,70 @@
           </li>
           <li class="item-menu">
             <button onclick="showGen(1)">
-              <span class="icon"><img src="https://github.com/yScroww/Pokedex-Site/blob/main/assets/kanto.png?raw=true"></span>
+              <span class="icon"><img
+                  src="assets/kanto.png"></span>
               <span class="txt-link">Kanto - 1º Geração</span>
             </button>
           </li>
           <li class="item-menu">
             <button onclick="showGen(2)">
-              <span class="icon"><img src="https://github.com/yScroww/Pokedex-Site/blob/main/assets/johto.png?raw=true"></img></span>
+              <span class="icon"><img
+                  src="assets/johto.png"></img></span>
               <span class="txt-link">Johto - 2º Geração</span>
             </button>
           </li>
           <li class="item-menu">
             <button onclick="showGen(3)">
-              <span class="icon"><img src="https://github.com/yScroww/Pokedex-Site/blob/main/assets/hoenn.png?raw=true"></img>
+              <span class="icon"><img
+                  src="assets/hoenn.png"></img>
               </span>
               <span class="txt-link">Hoenn - 3º Geração</span>
             </button>
           </li>
           <li class="item-menu">
             <button onclick="showGen(4)">
-              <span class="icon"><img src="https://github.com/yScroww/Pokedex-Site/blob/main/assets/sinnoh.png?raw=true"></img>
+              <span class="icon"><img
+                  src="assets/sinnoh.png"></img>
               </span>
               <span class="txt-link">Sinnoh - 4º Geração</span>
             </button>
           </li>
           <li class="item-menu">
             <button onclick="showGen(5)">
-              <span class="icon"><img src="https://github.com/yScroww/Pokedex-Site/blob/main/assets/unova.png?raw=true"></img>
+              <span class="icon"><img
+                  src="assets/unova.png"></img>
               </span>
               <span class="txt-link">Unova - 5º Geração</span>
             </button>
           </li>
           <li class="item-menu">
             <button onclick="showGen(6)">
-              <span class="icon"><img src="https://github.com/yScroww/Pokedex-Site/blob/main/assets/kalos.png?raw=true"></img>
+              <span class="icon"><img
+                  src="assets/kalos.png"></img>
               </span>
               <span class="txt-link">Kalos - 6º Geração</span>
             </button>
           </li>
           <li class="item-menu">
             <button onclick="showGen(7)">
-              <span class="icon"><img src="https://github.com/yScroww/Pokedex-Site/blob/main/assets/alola.png?raw=true"></img>
+              <span class="icon"><img
+                  src="assets/alola.png"></img>
               </span>
               <span class="txt-link">Alola - 7º Geração</span>
             </button>
           </li>
           <li class="item-menu">
             <button onclick="showGen(8)">
-              <span class="icon"><img src="https://github.com/yScroww/Pokedex-Site/blob/main/assets/galar.png?raw=true"></img>
+              <span class="icon"><img
+                  src="assets/galar.png"></img>
               </span>
               <span class="txt-link">Galar - 8º Geração</span>
             </button>
           </li>
           <li class="item-menu">
             <button onclick="showGen(9)">
-              <span class="icon"><img src="https://github.com/yScroww/Pokedex-Site/blob/main/assets/paldea.png?raw=true"></img>
+              <span class="icon"><img
+                  src="assets/paldea.png"></img>
               </span>
               <span class="txt-link">Paldea - 9º Geração</span>
             </button>
@@ -98,7 +109,6 @@
         </ul>
       </div>
     </nav>
-
     <main>
       <section class="pokemon-list">
         <div class="body-loader">
@@ -107,7 +117,7 @@
       </section>
       <div class="borda-pokeinfo">
         <section class="pokeinfo">
-          <h1 class="pokenome">MEU PAU</h1>
+          <h1 class="pokenome">pokenome</h1>
           <div class="meialua"></div>
           <div>
             <img class="pokefoto" src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/156.png"></img>
@@ -132,12 +142,12 @@
               <div class="atr_line"><label for="def">Defense: <span id="def_value">111</span></label><input type="range" id="def" min="0" max="127" class="atr_input"></div>
             </div>
             <div class="icons">
-              <img src="https://raw.githubusercontent.com/yScroww/Pokedex-Site/main/assets/chatot/chatot%20bico%20aberta%20com%20som.png" class="chadot">
+              <img src="assets\chatot\chatotbicofechado.png" class="chadot">
               <img src="https://raw.githubusercontent.com/yScroww/Pokedex-Site/main/assets/gênero/macho.png" class="genero">
             </div>
           </div>
           <div class="baci">
-            <img class="altform" src="assets/shiny.png">
+            <img class="shiny" src="assets/shiny.png">
           </div>
         </section>
         <img class="bolaesq" src="https://raw.githubusercontent.com/yScroww/Pokedex-Site/main/assets/grayball.png">
