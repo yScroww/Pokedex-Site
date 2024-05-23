@@ -35,10 +35,11 @@ body::-webkit-scrollbar-thumb {
 
 body {
     font-family: sans-serif;
-    background: url("https://github.com/yScroww/Pokedex-Site/blob/main/bg/bg%20(1).gif?raw=true") no-repeat center center fixed;
+    background: url("https://github.com/yScroww/Pokedex-Site/blob/main/assets/bg/fundo.gif?raw=true") no-repeat center center fixed;
     background-size: cover;
     color: #333;
     overflow-y: scroll;
+    height: 100vw;
 }
 main {
     display: flex;
