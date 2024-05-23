@@ -1,7 +1,9 @@
 body {
     font-family: sans-serif;
-    background-image:url(https://cdn.discordapp.com/attachments/1240086657802436628/1240096646419845180/background.jpg?ex=66455180&is=66440000&hm=40895cdd1fb14ee1d3f5702e9085c21e19d86f2eedfe444b4ea38d180e5cc1d0&);
+    background-image:url('../assets/bg/campo.jpg');
     background-color: 100%;
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 
 .container {
