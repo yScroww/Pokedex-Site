@@ -4,48 +4,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pokédex</title>
+  <link rel="shortcut icon" href="https://img.icons8.com/?size=256&id=63311&format=png" type="image/x-icon">
   <link rel="stylesheet" href="./style/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>Pokédex</title>
 </head>
 
 <body>
+  <audio src="assets/som_fundo_pkd.mp3" id="musga"></audio>
   <header>
-    <h1>Pokédex</h1>
+    <img src="assets/Pokédex_logo.png">
 
   </header>
   <div class="teste">
     <nav class="menu-lateral">
-      <div class="btn-expandir">
-        <i class="bi bi-list"></i>
+      <div class="container">
+        <div class="login">
+          <img class="btn-login" src="https://cdn-icons-png.flaticon.com/512/152/152532.png" alt="logar">
+          <span class="txt-login">Logar</span>
+        </div>
+        <div class="btn-expandir">
+          <i class="bi bi-caret-right-fill" id="expandir"></i>
+        </div>
+        <ul class="lista">
+          <li class="item-menu ativo">
+            <button >
+              <span class="icon"><label for="lupa"><img
+                    src="assets/Dream_Wide_Lens_Sprite.png"></label></span>
+              <section class="search-bar" id="pesquisa">
+                <input id="lupa" type="text" placeholder="Procure um Pokémon">
+              </section>
+            </button>
+          </li>
+          <li class="item-menu">
+            <button onclick="showGen(1)">
+              <span class="icon"><img
+                  src="assets/kanto.png"></span>
+              <span class="txt-link">Kanto - 1º Geração</span>
+            </button>
+          </li>
+          <li class="item-menu">
+            <button onclick="showGen(2)">
+              <span class="icon"><img
+                  src="assets/johto.png"></img></span>
+              <span class="txt-link">Johto - 2º Geração</span>
+            </button>
+          </li>
+          <li class="item-menu">
+            <button onclick="showGen(3)">
+              <span class="icon"><img
+                  src="assets/hoenn.png"></img>
+              </span>
+              <span class="txt-link">Hoenn - 3º Geração</span>
+            </button>
+          </li>
+          <li class="item-menu">
+            <button onclick="showGen(4)">
+              <span class="icon"><img
+                  src="assets/sinnoh.png"></img>
+              </span>
+              <span class="txt-link">Sinnoh - 4º Geração</span>
+            </button>
+          </li>
+          <li class="item-menu">
+            <button onclick="showGen(5)">
+              <span class="icon"><img
+                  src="assets/unova.png"></img>
+              </span>
+              <span class="txt-link">Unova - 5º Geração</span>
+            </button>
+          </li>
+          <li class="item-menu">
+            <button onclick="showGen(6)">
+              <span class="icon"><img
+                  src="assets/kalos.png"></img>
+              </span>
+              <span class="txt-link">Kalos - 6º Geração</span>
+            </button>
+          </li>
+          <li class="item-menu">
+            <button onclick="showGen(7)">
+              <span class="icon"><img
+                  src="assets/alola.png"></img>
+              </span>
+              <span class="txt-link">Alola - 7º Geração</span>
+            </button>
+          </li>
+          <li class="item-menu">
+            <button onclick="showGen(8)">
+              <span class="icon"><img
+                  src="assets/galar.png"></img>
+              </span>
+              <span class="txt-link">Galar - 8º Geração</span>
+            </button>
+          </li>
+          <li class="item-menu">
+            <button onclick="showGen(9)">
+              <span class="icon"><img
+                  src="assets/paldea.png"></img>
+              </span>
+              <span class="txt-link">Paldea - 9º Geração</span>
+            </button>
+          </li>
+        </ul>
       </div>
-      <ul>
-        <li>
-          <section class="search-bar">
-            <input type="text" placeholder="Search for Pokémon">
-            <button>Search</button>
-          </section>
-        </li>
-        <li class="item-menu">
-          <a href="#">
-            <span class="icon"><i class="bi bi-brightness-high"></i></span>
-            <span class="txt-link">Tema escuro</span>
-          </a>
-        </li>
-        <li class="item-menu">
-          <a href="#">
-            <span class="icon"><i class="bi bi-clipboard2-plus"></i></span>
-            <span class="txt-link">Team Builder</span>
-          </a>
-        </li>
-      </ul>
     </nav>
+    <main>
+      <section class="pokemon-list">
+        <div class="body-loader">
+          <div class="loader"></div>
+        </div>
+      </section>
+      <div class="borda-pokeinfo">
+        <section class="pokeinfo">
+          <h1 class="pokenome">pokenome</h1>
+          <div class="meialua"></div>
+          <div>
+            <img class="pokefoto" src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/156.png"></img>
+            <div class="tipos" id="tipos">
+              <div class="tipo1">
+                <img src="https://tiermaker.com/images/templates/iniciais-tipo-fogo-15231297/152312971658696332.png" class="type1">
+              </div>
+              <div class="tipo2">
+                <img src="https://tiermaker.com/images/templates/iniciais-tipo-fogo-15231297/152312971658696332.png" class="type2">
+              </div>
 
-  <main>
-    <section class="pokemon-list">
-    </section>
-  </main>
-</div>
+            </div>
+
+          </div>
+          <div class="teste2">
+            <div class="atributos">
+              <div class="atr_line"><label for="hp">HP: <span id="hp_value">111</span></label><input type="range" id="hp" min="0" max="127" class="atr_input"></div>
+              <div class="atr_line"><label for="atk">Attack: <span id="atk_value">111</span></label><input type="range" id="atk" min="0" max="127" class="atr_input"></div>
+              <div class="atr_line"><label for="spa">Sp. Atk: <span id="spa_value">127</span></label><input type="range" id="spa" min="0" max="127" class="atr_input"></div>
+              <div class="atr_line"><label for="spd">Sp. Def: <span id="spd_value">111</span></label><input type="range" id="spd" min="0" max="127" class="atr_input"></div>
+              <div class="atr_line"><label for="spe">Speed: <span id="spe_value">111</span></label><input type="range" id="spe" min="0" max="127" class="atr_input"></div>
+              <div class="atr_line"><label for="def">Defense: <span id="def_value">111</span></label><input type="range" id="def" min="0" max="127" class="atr_input"></div>
+            </div>
+            <div class="icons">
+              <img src="assets\chatot\chatotbicofechado.png" class="chadot">
+              <img src="https://raw.githubusercontent.com/yScroww/Pokedex-Site/main/assets/gênero/macho.png" class="genero">
+            </div>
+          </div>
+          <div class="baci">
+            <img class="shiny" src="assets/shiny.png">
+          </div>
+        </section>
+        <img class="bolaesq" src="https://raw.githubusercontent.com/yScroww/Pokedex-Site/main/assets/grayball.png">
+        <img class="boladir" src="https://raw.githubusercontent.com/yScroww/Pokedex-Site/main/assets/grayball.png">
+        <script src="./js/Pokedex.js"></script>
+      </div>
+    </main>
+  </div>
   <script src="./js/Pokedex.js"></script>
 </body>
 
